@@ -552,7 +552,7 @@ if ($report_mem_util || $report_mem_used || $report_mem_avail || $report_swap_ut
 if ($load_average)
 {
   my $load_average=`uptime | awk '{print \$12}' | cut -d "," -f 1`;
-  add_metric('LoadAverage', 'Percent', $load_average);
+  add_metric('LoadAverage', 'None', $load_average);
 }
 
 # collect iowait
